@@ -1,0 +1,149 @@
+/* ===========================
+   Paleta de colores
+   =========================== */
+:root {
+    --color-primary: #059669;   /* Verde principal */
+    --color-secondary: #64748B; /* Gris-azulado */
+    --color-tertiary: #84A98C;  /* Verde suave */
+    --color-neutral: #F8FAFC;   /* Fondo claro */
+    --color-dark: #1B1B1B;      /* Texto oscuro */
+}
+
+/* ===========================
+   Tipografía base
+   =========================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--color-neutral);
+    color: var(--color-dark);
+}
+
+/* ===========================
+   Layout principal
+   =========================== */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Panel izquierdo reducido y Nutrisof arriba */
+.left-panel {
+    flex: 0.5; /* ocupa menos espacio */
+    background-color: var(--color-primary);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* alinea a la izquierda */
+    justify-content: flex-start; /* contenido arriba */
+    padding: 40px;
+    text-align: left;
+}
+
+.left-panel h1 {
+    font-size: 64px;       /* mucho más grande */
+    font-weight: bold;     /* más grueso */
+    letter-spacing: 2px;   /* espacio entre letras */
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
+    /* Comic Sans MS y Trebuchet MS son más amigables y suaves */
+}
+
+.left-panel p {
+    font-size: 16px;
+    max-width: 280px;
+    margin-bottom: 10px;
+}
+
+/* Panel derecho más amplio */
+.right-panel {
+    flex: 1.3; /* ocupa más espacio */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Caja de login más grande */
+.login-box {
+    width: 480px; /* más ancho */
+    padding: 50px; /* más espacio interno */
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.login-box h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+/* ===========================
+   Formularios
+   =========================== */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* ===========================
+   Botón principal
+   =========================== */
+button {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+button:hover {
+    background-color: #047857; /* tono más oscuro */
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   Links y extras
+   =========================== */
+.extra-links {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.extra-links a {
+    color: var(--color-primary);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+

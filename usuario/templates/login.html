@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nutrisof - Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Panel izquierdo -->
+        <div class="left-panel">
+            <h1>Nutrisof</h1>
+            <p>Avanzando el bienestar animal con inteligencia nutricional respaldada científicamente.</p>
+            <small>Confiado por más de 1,200 clínicas globalmente</small>
+        </div>
+
+        <!-- Panel derecho -->
+        <div class="right-panel">
+            <div class="login-box">
+                <h2>INICIAR SESIÓN</h2>
+                
+                {% if error %}
+                    <p>{{ error }}</p>
+                {% endif %}
+                
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+                        <label for="username">Correo</label>
+                        <input type="text" name="username" placeholder="nombre@clinica.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Clave</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="checkbox" name="remember"> Mantenerme autenticado por 30 días
+                    </div>
+                    
+                    <button type="submit">Ingresar al Dashboard →</button>
+                </form>
+                
+                <div class="extra-links">
+                    <p>¿No tienes cuenta institucional? <a href="#">Solicitar acceso</a></p>
+                    <a href="#">Privacidad</a> | 
+                    <a href="#">Cumplimiento</a> | 
+                    <a href="#">Soporte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
